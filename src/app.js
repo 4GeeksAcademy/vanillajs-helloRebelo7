@@ -21,10 +21,14 @@ let generateExcuse = () => {
     "while I was doing karate"
   ];
 
-  let whoIndx = Math.floor(Math.random() * who.length);
-  let actionIndx = Math.floor(Math.random() * action.length);
-  let whatIndx = Math.floor(Math.random() * what.length);
-  let whenIndx = Math.floor(Math.random() * when.length);
+  function randomizeSentences(escusesWords) {
+    return Math.floor(Math.random() * escusesWords.length);
+  }
+
+  let whoIndx = randomizeSentences(who);
+  let actionIndx = randomizeSentences(action);
+  let whatIndx = randomizeSentences(what);
+  let whenIndx = randomizeSentences(when);
 
   return (
     who[whoIndx] +
